@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsiveness -->
     <title>Library Management System</title>
     <style>
+        /* Common styles */
         body {
             font-family: Arial, sans-serif;
             color: #333;
@@ -36,6 +38,7 @@
             justify-content: center;
             flex-grow: 1;
             z-index: 1; /* Ensure main content stays on top */
+            padding: 20px;
         }
 
         footer {
@@ -80,8 +83,12 @@
         }
 
         @media (max-width: 600px) {
+            header {
+                font-size: 20px; /* Adjust header font size for small screens */
+            }
+
             main {
-                padding: 20px;
+                padding: 10px; /* Reduce padding for main content on small screens */
             }
 
             a {
