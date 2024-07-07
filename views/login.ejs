@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsiveness -->
     <title>Member Login</title>
     <style>
+        /* Common styles */
         body {
             font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full viewport height */
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             background: url('https://images.pexels.com/photos/3747553/pexels-photo-3747553.jpeg') no-repeat center center fixed;
             background-size: cover;
             position: relative; /* Needed for footer positioning */
@@ -73,7 +76,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 10px 0;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
             z-index: 0; /* Send footer to the back */
