@@ -3,33 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <title>Add New Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://images.pexels.com/photos/13617521/pexels-photo-13617521.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #39843c;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            input[type="text"], input[type="number"] {
+                width: calc(100% - 10px);
+            }
+
+            button {
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Add New Book</h1>
-    <form action="/admin/books/add" method="POST">
-       
-        <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
-        </div>
-        
-        <div>
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required>
-        </div>
-        <div>
-            <label for="price">Price:</label>
-            <input type="number" id="price" name="price" step="0.01" required>
-        </div>
-        <div>
-            <label for="status">Status:</label>
-            <input type="text" id="status" name="status" required>
-        </div>
-        <div>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" required>
-        </div>
-        <button type="submit">Add Book</button>
-    </form>
+    <div class="container">
+        <h1>Add New Book</h1>
+        <form action="/admin/books/add" method="POST">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            <div>
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" required>
+            </div>
+            <div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
 </body>
 </html>

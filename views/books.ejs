@@ -3,6 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Available Books</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://images.pexels.com/photos/1850021/pexels-photo-1850021.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 90%;
+            max-width: 800px;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Available Books</h1>
@@ -14,7 +85,6 @@
                 <th>Author</th>
                 <th>Price</th>
                 <th>Status</th>
-                <!-- <th>Quantity</th> -->
                 <th>Action</th>
             </tr>
         </thead>
@@ -26,7 +96,6 @@
                     <td><%= book.author %></td>
                     <td><%= book.price %></td>
                     <td><%= book.status %></td>
-                    <!-- <td><%= book.quantity %></td> -->
                     <td>
                         <a href="/books/borrow/<%= book.id %>">Borrow</a>
                     </td>
