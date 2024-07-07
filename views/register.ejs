@@ -12,9 +12,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background: url('https://images.pexels.com/photos/2767814/pexels-photo-2767814.jpeg') no-repeat center center fixed;
             background-size: cover;
+            position: relative; /* Needed for footer positioning */
         }
 
         .container {
@@ -25,6 +26,7 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
+            z-index: 1; /* Ensure form stays on top */
         }
 
         h1 {
@@ -66,6 +68,28 @@
             background-color: #39843c;
         }
 
+        footer {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0; /* Send footer to the back */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            animation: highlight 2s infinite alternate;
+        }
+
+        @keyframes highlight {
+            from { color: #fff; }
+            to { color: #4CAF50; }
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -104,5 +128,8 @@
             <button type="submit">Register</button>
         </form>
     </div>
+    <footer>
+        <p>This website created by Aryabata Team: Dhanavanthesh S, Adhitya Kulkarni, Gaurav Kumar</p>
+    </footer>
 </body>
 </html>
