@@ -13,8 +13,6 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Ensures footer stays at bottom */
-            align-items: center;
             min-height: 100vh; /* Ensure full viewport height */
             text-align: center;
             background: url('https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg') no-repeat center center fixed;
@@ -37,7 +35,6 @@
             align-items: center;
             justify-content: center;
             flex-grow: 1;
-            z-index: 1; /* Ensure main content stays on top */
             padding: 20px;
         }
 
@@ -49,7 +46,6 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            z-index: 0; /* Send footer to the back */
         }
 
         footer p {
